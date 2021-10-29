@@ -6,7 +6,7 @@ To perform the exercise you need to use a linux machine for it to work. As a sol
 
 # Prerequisites
 
-Vagrant [See documentation](https://www.vagrantup.com/docs/installation)
+Vagrant [See documentation](https://www.vagrantup.com/docs/installation)  
 Virtualbox [See documentation](https://www.virtualbox.org/wiki/Downloads)
 
 # How to
@@ -32,17 +32,20 @@ vagrant ssh
 ## Create your AWS key pair
 1. Login to AWS console to create a key pair
 2. Go to EC2
-3. Under network and Security go to Key Pairs
+3. Under network and Security go to Key Pairs  
 ![](media/2021-10-29-12-07-29.png)  
-4. select create key pair
-![](media/2021-10-29-12-08-01.png)  
-5. Give a name which you need later during the kitchen exercise and click create Key Pair
-![](media/2021-10-29-12-08-52.png)
+4. select create key pair    
+![](media/2021-10-29-12-08-01.png)    
+5. Give a name which you need later during the kitchen exercise and click create Key Pair  
+![](media/2021-10-29-12-08-52.png)  
 6. You have now downloaded a file ```my_key_pair```. Copy this file for now to the location of the git repository you cloned
 7. During the exercise the pem file location should be /vagrant/me_key_pair.pem
 
 ## Start the exercise on your Vagrant machine
-1. make sure you have the vagrant SSH terminal prompt
+1. make sure you have the vagrant SSH terminal prompt which should still be open
+```
+vagrant ssh
+```
 2. Setup the AWS credentials on the environment
 ```
 export AWS_ACCESS_KEY_ID=
