@@ -4,7 +4,9 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "hashicorp/bionic64"
   config.vm.hostname = "kitchen"
-  config.vm.provision "shell", path: "setup.sh"
+  
+  config.vm.provision "shell", path: "install_kitchen.sh"
+  config.vm.provision "shell", path: "install_terraform.sh"
 
   config.vm.provider "virtualbox" do |v|
     v.memory = 1024*2
