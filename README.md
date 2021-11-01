@@ -1,8 +1,10 @@
 # Kitchen EC2 Amazon
 
-This repository describes Test Kitchen plugins for testing Terraform configuration.
+This repository creates a virtual machine to get you started with this Test Kitchen. It is based on this [Test Kitchen Tutorial](https://newcontext-oss.github.io/kitchen-terraform/tutorials/amazon_provider_ec2.html). 
 
-You create infrastructure in AWS and using the Test Kitchen plugin you see of your created configuration is actually an Ubuntu server. 
+It also enables you to quickly test other Test Kitchen options you want. 
+
+You create infrastructure in AWS and using the Test Kitchen plugin you see if your created configuration is actually an Ubuntu server. 
 
 # Prerequisites
 
