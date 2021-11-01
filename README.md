@@ -2,7 +2,7 @@
 
 This repository describes Test Kitchen plugins for testing Terraform configuration.
 
-We are create infrastructure in AWS and using the Test Kitchen plugin to see of our created configuration is actually an Ubuntu server
+You create infrastructure in AWS and using the Test Kitchen plugin you see of your created configuration is actually an Ubuntu server. 
 
 # Prerequisites
 
