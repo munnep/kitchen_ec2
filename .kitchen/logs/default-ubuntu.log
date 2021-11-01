@@ -1,0 +1,175 @@
+I, [2021-11-01T07:27:20.314915 #2031]  INFO -- default-ubuntu: -----> Destroying <default-ubuntu>...
+W, [2021-11-01T07:27:20.316065 #2031]  WARN -- default-ubuntu: Reading the Terraform client version...
+I, [2021-11-01T07:27:20.367568 #2031]  INFO -- default-ubuntu: Terraform v1.0.10
+I, [2021-11-01T07:27:20.367740 #2031]  INFO -- default-ubuntu: on linux_amd64
+I, [2021-11-01T07:27:20.367894 #2031]  INFO -- default-ubuntu: + provider registry.terraform.io/hashicorp/aws v3.63.0
+W, [2021-11-01T07:27:20.381412 #2031]  WARN -- default-ubuntu: Finished reading the Terraform client version.
+W, [2021-11-01T07:27:20.381818 #2031]  WARN -- default-ubuntu: Verifying the Terraform client version is in the supported interval of < 1.1.0, >= 0.11.4...
+W, [2021-11-01T07:27:20.382676 #2031]  WARN -- default-ubuntu: Finished verifying the Terraform client version.
+W, [2021-11-01T07:27:20.383023 #2031]  WARN -- default-ubuntu: Initializing the Terraform working directory...
+I, [2021-11-01T07:27:20.433905 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:20.434661 #2031]  INFO -- default-ubuntu: [0m[1mInitializing the backend...[0m
+I, [2021-11-01T07:27:21.451834 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:21.452307 #2031]  INFO -- default-ubuntu: [0m[1mInitializing provider plugins...[0m
+I, [2021-11-01T07:27:21.452981 #2031]  INFO -- default-ubuntu: - Reusing previous version of hashicorp/aws from the dependency lock file
+I, [2021-11-01T07:27:22.580483 #2031]  INFO -- default-ubuntu: - Using previously-installed hashicorp/aws v3.63.0
+I, [2021-11-01T07:27:22.581020 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:22.581856 #2031]  INFO -- default-ubuntu: [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+W, [2021-11-01T07:27:22.594671 #2031]  WARN -- default-ubuntu: Finished initializing the Terraform working directory.
+W, [2021-11-01T07:27:22.595179 #2031]  WARN -- default-ubuntu: Selecting the kitchen-terraform-default-ubuntu Terraform workspace...
+W, [2021-11-01T07:27:23.910314 #2031]  WARN -- default-ubuntu: Finished selecting the kitchen-terraform-default-ubuntu Terraform workspace.
+W, [2021-11-01T07:27:23.910591 #2031]  WARN -- default-ubuntu: Destroying the Terraform-managed infrastructure...
+I, [2021-11-01T07:27:27.526917 #2031]  INFO -- default-ubuntu: [0m[1maws_security_group.allow_ssh: Refreshing state... [id=sg-019660ea70083c9c7][0m
+I, [2021-11-01T07:27:27.962366 #2031]  INFO -- default-ubuntu: [0m[1maws_instance.example: Refreshing state... [id=i-0dd484a05cb7d907b][0m
+I, [2021-11-01T07:27:31.590474 #2031]  INFO -- default-ubuntu: [0m
+I, [2021-11-01T07:27:31.590696 #2031]  INFO -- default-ubuntu: [1m[36mNote:[0m[1m Objects have changed outside of Terraform[0m
+I, [2021-11-01T07:27:31.590752 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:31.591187 #2031]  INFO -- default-ubuntu: [0mTerraform detected the following changes made outside of Terraform since the
+I, [2021-11-01T07:27:31.591307 #2031]  INFO -- default-ubuntu: last "terraform apply":
+I, [2021-11-01T07:27:31.591459 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:31.591611 #2031]  INFO -- default-ubuntu: [1m  # aws_instance.example[0m has been changed[0m[0m
+I, [2021-11-01T07:27:31.591749 #2031]  INFO -- default-ubuntu: [0m  [33m~[0m[0m resource "aws_instance" "example" {
+I, [2021-11-01T07:27:31.591926 #2031]  INFO -- default-ubuntu:  [1m[0mid[0m[0m                                   = "i-0dd484a05cb7d907b"
+I, [2021-11-01T07:27:31.592351 #2031]  INFO -- default-ubuntu:       [32m+[0m [0m[1m[0mtags[0m[0m                                 = {}
+I, [2021-11-01T07:27:31.592518 #2031]  INFO -- default-ubuntu:  [90m# (29 unchanged attributes hidden)[0m[0m
+I, [2021-11-01T07:27:31.592678 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:31.592839 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:31.593001 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:31.593158 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:31.593213 #2031]  INFO -- default-ubuntu:  [90m# (4 unchanged blocks hidden)[0m[0m
+I, [2021-11-01T07:27:31.593378 #2031]  INFO -- default-ubuntu:     }
+I, [2021-11-01T07:27:31.593468 #2031]  INFO -- default-ubuntu: [1m  # aws_security_group.allow_ssh[0m has been changed[0m[0m
+I, [2021-11-01T07:27:31.593566 #2031]  INFO -- default-ubuntu: [0m  [33m~[0m[0m resource "aws_security_group" "allow_ssh" {
+I, [2021-11-01T07:27:31.593685 #2031]  INFO -- default-ubuntu:  [1m[0mid[0m[0m                     = "sg-019660ea70083c9c7"
+I, [2021-11-01T07:27:31.593781 #2031]  INFO -- default-ubuntu:  [1m[0mname[0m[0m                   = "allow_ssh_mykitchen"
+I, [2021-11-01T07:27:31.593827 #2031]  INFO -- default-ubuntu:       [32m+[0m [0m[1m[0mtags[0m[0m                   = {}
+I, [2021-11-01T07:27:31.593868 #2031]  INFO -- default-ubuntu:  [90m# (8 unchanged attributes hidden)[0m[0m
+I, [2021-11-01T07:27:31.593911 #2031]  INFO -- default-ubuntu:     }
+I, [2021-11-01T07:27:31.593949 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:31.593986 #2031]  INFO -- default-ubuntu: Unless you have made equivalent changes to your configuration, or ignored the
+I, [2021-11-01T07:27:31.594024 #2031]  INFO -- default-ubuntu: relevant attributes using ignore_changes, the following plan may include
+I, [2021-11-01T07:27:31.594065 #2031]  INFO -- default-ubuntu: actions to undo or respond to these changes.
+I, [2021-11-01T07:27:31.594103 #2031]  INFO -- default-ubuntu: [90m
+I, [2021-11-01T07:27:31.594159 #2031]  INFO -- default-ubuntu: ─────────────────────────────────────────────────────────────────────────────[0m
+I, [2021-11-01T07:27:31.594203 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:31.594241 #2031]  INFO -- default-ubuntu: Terraform used the selected providers to generate the following execution
+I, [2021-11-01T07:27:31.594279 #2031]  INFO -- default-ubuntu: plan. Resource actions are indicated with the following symbols:
+I, [2021-11-01T07:27:31.594317 #2031]  INFO -- default-ubuntu:   [31m-[0m destroy
+I, [2021-11-01T07:27:31.594353 #2031]  INFO -- default-ubuntu: [0m
+I, [2021-11-01T07:27:31.594390 #2031]  INFO -- default-ubuntu: Terraform will perform the following actions:
+I, [2021-11-01T07:27:31.594435 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:31.599926 #2031]  INFO -- default-ubuntu: [1m  # aws_instance.example[0m will be [1m[31mdestroyed[0m[0m
+I, [2021-11-01T07:27:31.599984 #2031]  INFO -- default-ubuntu: [0m  [31m-[0m[0m resource "aws_instance" "example" {
+I, [2021-11-01T07:27:31.600038 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mami[0m[0m                                  = "ami-fce3c696" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600083 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0marn[0m[0m                                  = "arn:aws:ec2:us-east-1:938620692197:instance/i-0dd484a05cb7d907b" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600126 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0massociate_public_ip_address[0m[0m          = true [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600167 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mavailability_zone[0m[0m                    = "us-east-1b" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600219 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mcpu_core_count[0m[0m                       = 1 [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600263 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mcpu_threads_per_core[0m[0m                 = 1 [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600301 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mdisable_api_termination[0m[0m              = false [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600341 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mebs_optimized[0m[0m                        = false [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600437 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mget_password_data[0m[0m                    = false [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600486 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mhibernation[0m[0m                          = false [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600544 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mid[0m[0m                                   = "i-0dd484a05cb7d907b" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600584 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0minstance_initiated_shutdown_behavior[0m[0m = "stop" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600620 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0minstance_state[0m[0m                       = "running" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600732 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0minstance_type[0m[0m                        = "m3.medium" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600771 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mipv6_address_count[0m[0m                   = 0 [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600807 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mipv6_addresses[0m[0m                       = [] [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600844 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mkey_name[0m[0m                             = "patrick_key_pair" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600879 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mmonitoring[0m[0m                           = false [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600915 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mprimary_network_interface_id[0m[0m         = "eni-0e5679d1339175c2c" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600952 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mprivate_dns[0m[0m                          = "ip-172-31-83-45.ec2.internal" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.600991 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mprivate_ip[0m[0m                           = "172.31.83.45" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.601026 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mpublic_dns[0m[0m                           = "ec2-54-158-55-76.compute-1.amazonaws.com" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.601067 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mpublic_ip[0m[0m                            = "54.158.55.76" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.601102 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0msecondary_private_ips[0m[0m                = [] [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.601141 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0msecurity_groups[0m[0m                      = [
+I, [2021-11-01T07:27:31.601179 #2031]  INFO -- default-ubuntu:    [31m-[0m [0m"allow_ssh_mykitchen",
+I, [2021-11-01T07:27:31.601220 #2031]  INFO -- default-ubuntu:  ] [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.601256 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0msource_dest_check[0m[0m                    = true [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.601307 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0msubnet_id[0m[0m                            = "subnet-6d586343" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.601345 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mtags[0m[0m                                 = {} [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.601381 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mtags_all[0m[0m                             = {} [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.601416 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mtenancy[0m[0m                              = "default" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.601533 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mvpc_security_group_ids[0m[0m               = [
+I, [2021-11-01T07:27:31.601588 #2031]  INFO -- default-ubuntu:    [31m-[0m [0m"sg-019660ea70083c9c7",
+I, [2021-11-01T07:27:31.601646 #2031]  INFO -- default-ubuntu:  ] [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.601684 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:31.601739 #2031]  INFO -- default-ubuntu:       [31m-[0m [0mcapacity_reservation_specification {
+I, [2021-11-01T07:27:31.605652 #2031]  INFO -- default-ubuntu:    [31m-[0m [0m[1m[0mcapacity_reservation_preference[0m[0m = "open" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.605728 #2031]  INFO -- default-ubuntu:  }
+I, [2021-11-01T07:27:31.605910 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:31.605960 #2031]  INFO -- default-ubuntu:       [31m-[0m [0menclave_options {
+I, [2021-11-01T07:27:31.606004 #2031]  INFO -- default-ubuntu:    [31m-[0m [0m[1m[0menabled[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.606048 #2031]  INFO -- default-ubuntu:  }
+I, [2021-11-01T07:27:31.606174 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:31.606219 #2031]  INFO -- default-ubuntu:       [31m-[0m [0mmetadata_options {
+I, [2021-11-01T07:27:31.606262 #2031]  INFO -- default-ubuntu:    [31m-[0m [0m[1m[0mhttp_endpoint[0m[0m               = "enabled" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.606307 #2031]  INFO -- default-ubuntu:    [31m-[0m [0m[1m[0mhttp_put_response_hop_limit[0m[0m = 1 [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.606366 #2031]  INFO -- default-ubuntu:    [31m-[0m [0m[1m[0mhttp_tokens[0m[0m                 = "optional" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.606441 #2031]  INFO -- default-ubuntu:  }
+I, [2021-11-01T07:27:31.606513 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:31.606553 #2031]  INFO -- default-ubuntu:       [31m-[0m [0mroot_block_device {
+I, [2021-11-01T07:27:31.606593 #2031]  INFO -- default-ubuntu:    [31m-[0m [0m[1m[0mdelete_on_termination[0m[0m = true [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.606637 #2031]  INFO -- default-ubuntu:    [31m-[0m [0m[1m[0mdevice_name[0m[0m           = "/dev/sda1" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.606678 #2031]  INFO -- default-ubuntu:    [31m-[0m [0m[1m[0mencrypted[0m[0m             = false [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.606722 #2031]  INFO -- default-ubuntu:    [31m-[0m [0m[1m[0miops[0m[0m                  = 100 [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.606762 #2031]  INFO -- default-ubuntu:    [31m-[0m [0m[1m[0mtags[0m[0m                  = {} [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.606802 #2031]  INFO -- default-ubuntu:    [31m-[0m [0m[1m[0mthroughput[0m[0m            = 0 [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.606847 #2031]  INFO -- default-ubuntu:    [31m-[0m [0m[1m[0mvolume_id[0m[0m             = "vol-068fe7a4fe034cbfc" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.606905 #2031]  INFO -- default-ubuntu:    [31m-[0m [0m[1m[0mvolume_size[0m[0m           = 8 [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.606952 #2031]  INFO -- default-ubuntu:    [31m-[0m [0m[1m[0mvolume_type[0m[0m           = "gp2" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.606996 #2031]  INFO -- default-ubuntu:  }
+I, [2021-11-01T07:27:31.607034 #2031]  INFO -- default-ubuntu:     }
+I, [2021-11-01T07:27:31.607069 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:31.609035 #2031]  INFO -- default-ubuntu: [1m  # aws_security_group.allow_ssh[0m will be [1m[31mdestroyed[0m[0m
+I, [2021-11-01T07:27:31.609105 #2031]  INFO -- default-ubuntu: [0m  [31m-[0m[0m resource "aws_security_group" "allow_ssh" {
+I, [2021-11-01T07:27:31.609261 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0marn[0m[0m                    = "arn:aws:ec2:us-east-1:938620692197:security-group/sg-019660ea70083c9c7" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.609328 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mdescription[0m[0m            = "Allow SSH inbound traffic" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.609389 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0megress[0m[0m                 = [] [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.609428 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mid[0m[0m                     = "sg-019660ea70083c9c7" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.609470 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mingress[0m[0m                = [
+I, [2021-11-01T07:27:31.609516 #2031]  INFO -- default-ubuntu:    [31m-[0m [0m{
+I, [2021-11-01T07:27:31.609557 #2031]  INFO -- default-ubuntu:        [31m-[0m [0mcidr_blocks      = [
+I, [2021-11-01T07:27:31.609601 #2031]  INFO -- default-ubuntu:            [31m-[0m [0m"0.0.0.0/0",
+I, [2021-11-01T07:27:31.609641 #2031]  INFO -- default-ubuntu:          ]
+I, [2021-11-01T07:27:31.609686 #2031]  INFO -- default-ubuntu:        [31m-[0m [0mdescription      = ""
+I, [2021-11-01T07:27:31.609730 #2031]  INFO -- default-ubuntu:        [31m-[0m [0mfrom_port        = 22
+I, [2021-11-01T07:27:31.609801 #2031]  INFO -- default-ubuntu:        [31m-[0m [0mipv6_cidr_blocks = []
+I, [2021-11-01T07:27:31.609845 #2031]  INFO -- default-ubuntu:        [31m-[0m [0mprefix_list_ids  = []
+I, [2021-11-01T07:27:31.609885 #2031]  INFO -- default-ubuntu:        [31m-[0m [0mprotocol         = "tcp"
+I, [2021-11-01T07:27:31.609945 #2031]  INFO -- default-ubuntu:        [31m-[0m [0msecurity_groups  = []
+I, [2021-11-01T07:27:31.610077 #2031]  INFO -- default-ubuntu:        [31m-[0m [0mself             = false
+I, [2021-11-01T07:27:31.610123 #2031]  INFO -- default-ubuntu:        [31m-[0m [0mto_port          = 22
+I, [2021-11-01T07:27:31.610182 #2031]  INFO -- default-ubuntu:      },
+I, [2021-11-01T07:27:31.610221 #2031]  INFO -- default-ubuntu:  ] [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.610261 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mname[0m[0m                   = "allow_ssh_mykitchen" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.610298 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mowner_id[0m[0m               = "938620692197" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.610335 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mrevoke_rules_on_delete[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.610372 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mtags[0m[0m                   = {} [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.610408 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mtags_all[0m[0m               = {} [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.610445 #2031]  INFO -- default-ubuntu:       [31m-[0m [0m[1m[0mvpc_id[0m[0m                 = "vpc-a1aae3db" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:31.610482 #2031]  INFO -- default-ubuntu:     }
+I, [2021-11-01T07:27:31.610517 #2031]  INFO -- default-ubuntu: 
+I, [2021-11-01T07:27:31.610553 #2031]  INFO -- default-ubuntu: [0m[1mPlan:[0m 0 to add, 0 to change, 2 to destroy.
+I, [2021-11-01T07:27:31.610588 #2031]  INFO -- default-ubuntu: [0m[0m
+I, [2021-11-01T07:27:31.610623 #2031]  INFO -- default-ubuntu: [1mChanges to Outputs:[0m[0m
+I, [2021-11-01T07:27:31.610659 #2031]  INFO -- default-ubuntu:   [31m-[0m [0m[1m[0mpublic_dns[0m[0m = "ec2-54-158-55-76.compute-1.amazonaws.com" [90m->[0m [0m[90mnull[0m[0m
+I, [2021-11-01T07:27:33.100846 #2031]  INFO -- default-ubuntu: [0m[1maws_instance.example: Destroying... [id=i-0dd484a05cb7d907b][0m[0m
+I, [2021-11-01T07:27:43.102548 #2031]  INFO -- default-ubuntu: [0m[1maws_instance.example: Still destroying... [id=i-0dd484a05cb7d907b, 10s elapsed][0m[0m
+I, [2021-11-01T07:27:53.103120 #2031]  INFO -- default-ubuntu: [0m[1maws_instance.example: Still destroying... [id=i-0dd484a05cb7d907b, 20s elapsed][0m[0m
+I, [2021-11-01T07:28:03.104379 #2031]  INFO -- default-ubuntu: [0m[1maws_instance.example: Still destroying... [id=i-0dd484a05cb7d907b, 30s elapsed][0m[0m
+I, [2021-11-01T07:28:04.890628 #2031]  INFO -- default-ubuntu: [0m[1maws_instance.example: Destruction complete after 32s[0m
+I, [2021-11-01T07:28:04.894732 #2031]  INFO -- default-ubuntu: [0m[1maws_security_group.allow_ssh: Destroying... [id=sg-019660ea70083c9c7][0m[0m
+I, [2021-11-01T07:28:06.351754 #2031]  INFO -- default-ubuntu: [0m[1maws_security_group.allow_ssh: Destruction complete after 1s[0m
+I, [2021-11-01T07:28:06.358985 #2031]  INFO -- default-ubuntu: [0m[1m[32m
+I, [2021-11-01T07:28:06.359160 #2031]  INFO -- default-ubuntu: Destroy complete! Resources: 2 destroyed.
+W, [2021-11-01T07:28:06.373669 #2031]  WARN -- default-ubuntu: Finished destroying the Terraform-managed infrastructure.
+W, [2021-11-01T07:28:06.374151 #2031]  WARN -- default-ubuntu: Selecting the default Terraform workspace...
+I, [2021-11-01T07:28:07.676503 #2031]  INFO -- default-ubuntu: [0m[0m[32mSwitched to workspace "default".[0m
+W, [2021-11-01T07:28:07.689431 #2031]  WARN -- default-ubuntu: Finished selecting the default Terraform workspace.
+W, [2021-11-01T07:28:07.689789 #2031]  WARN -- default-ubuntu: Deleting the kitchen-terraform-default-ubuntu Terraform workspace...
+I, [2021-11-01T07:28:08.987800 #2031]  INFO -- default-ubuntu: [0m[32mDeleted workspace "kitchen-terraform-default-ubuntu"![0m
+W, [2021-11-01T07:28:08.999874 #2031]  WARN -- default-ubuntu: Finished deleting the kitchen-terraform-default-ubuntu Terraform workspace.
+I, [2021-11-01T07:28:09.001876 #2031]  INFO -- default-ubuntu: Finished destroying <default-ubuntu> (0m48.68s).
